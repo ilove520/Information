@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>摩拍扫码</title>
+    <meta charset="UTF-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFangSC-Regular','微软雅黑', 'Arial', sans-serif;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        body, ul, li, h1, h2, h3, h4, h5, h6, p, form, dl, dt, dd {margin: 0;padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+        img {
+            border-style: none;
+            pointer-events: none;
+        }
+        html{
+            font-size: 100px;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    var browser = {
+        versions : function() {
+            var u = navigator.userAgent;
+            return {
+                trident : u.indexOf('Trident') > -1,//IE内核
+                isIos9  : !!u.match(/OS 9/ig),
+                presto  : u.indexOf('Presto') > -1, //opera内核
+                webKit  : u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko   : u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+                mobile  : !!u.match(/AppleWebKit.*Mobile.*/),//是否为移动终端
+                ios     : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),//ios终端
+                android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone  : u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad    : u.indexOf('iPad') > -1, //是否iPad
+                webApp  : u.indexOf('Safari') == -1, //是否web应用程序，没有头部与底部
+                weixin  : u.indexOf('MicroMessenger') > -1,//是否微信 （2015-01-22新增）
+                qq      : u.match(/\sQQ/i) == " QQ" //是否QQ
+            };
+        }(),
+        language : (navigator.browserLanguage || navigator.language) .toLowerCase()
+    };
+
+    if(browser.versions.mobile || browser.versions.android || browser.versions.ios){
+
+        if(browser.versions.android){
+
+            window.location.href = "http://17111064737.share.sj.360.cn/qcms/view/t/detail?id=3911083";
+
+        }else if(browser.versions.ios){
+
+            window.location.href = "itms-apps://itunes.apple.com/cn/app/jie-zou-da-shi/id1305012049?mt=8";
+
+        }
+
+    }
+
+</script>
+</html>
